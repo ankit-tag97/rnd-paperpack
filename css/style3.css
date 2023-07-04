@@ -50,7 +50,7 @@ a:focus {
     height: 35px;
     line-height: 35px;
     text-align: center;
-    background: #2B1B17;
+    background: black;
     position: absolute;
     top: 10px;
     right: 10px;
@@ -84,11 +84,12 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    /* background: #6d7fcc; */
 }
 
 #sidebar ul.components {
     padding: 8px 0;
+    /* padding-top: 25px; */
 }
 
 #sidebar ul p {
@@ -104,22 +105,22 @@ a:focus {
 #sidebar ul li a {
     padding: 10px 15px;
     display: block;
-    color: #000;
+    color: azure;
     font-weight: 600;
-    background: #f1f1f1;
+    background: black;
     border-bottom: 1px solid #ddd;
 }
 
 #sidebar ul li a:hover,
 #sidebar ul li a:focus {
-    color: #fff;
-    background: #2B1B17;
+    color: goldenrod;
+    background: black;
 }
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff !important;
-    background: azure;
+    background: black;
 }
 
 a[data-toggle="collapse"] {
