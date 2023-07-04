@@ -35,9 +35,18 @@ hr {
   padding: 0;
 }
 
+.ex1 {
+  height: 100% !important;
+}
+
+.ex1 img {
+  min-height: 97% !important;
+}
+
 img,
 video {
   vertical-align: middle;
+  border-radius: 5px;
 }
 
 textarea {
@@ -345,7 +354,7 @@ a:not([href]):not([tabindex]) {
 }
 
 .home-slider {
-  padding-top: 60px;
+  /* padding-top: 60px; */
 }
 
 .home-slider .slider-wrapper {
@@ -524,8 +533,10 @@ a:not([href]):not([tabindex]) {
 
 .contact-details {
   background: #fff;
-  padding: 30px 0;
+  padding: 10px;
   box-shadow: 0px 0px 15px 0px rgb(189 189 189 / 75%);
+  border-radius: 5px;
+  margin: 10px 0;
 }
 
 .copyright {
@@ -818,7 +829,7 @@ ul.links li a:hover {
 }
 
 header {
-  position: fixed;
+  position: relative;
   z-index: 999;
   width: 100%;
   background: #000;
@@ -848,6 +859,7 @@ header #logo a img {
   border-radius: 3px;
   /* margin-left: -50px; */
   background: transparent;
+  padding: 10px 0;
 }
 
 header nav:after {
@@ -943,7 +955,9 @@ header .toggle {
   background-position: 0 40%;
   background-size: cover;
   min-height: 20vw;
-  padding-top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
 }
 
@@ -1011,6 +1025,7 @@ header .toggle {
   /*    border-radius: 20px;*/
   margin-bottom: 30px;
   background-color: #fff;
+  border-radius: 5px;
 }
 
 .singlewall {
@@ -1234,7 +1249,7 @@ header .top_header {
 @media (max-width: 800px) {
   .inner-banner {
     min-height: 27vw;
-    padding-top: 120px;
+    /* padding-top: 120px; */
   }
 }
 
@@ -1294,7 +1309,7 @@ header .top_header {
     text-decoration: none;
     border: none;
     float: right;
-    color: #222;
+    color: #fff;
     border-radius: 0;
   }
 
@@ -1674,4 +1689,134 @@ header .top_header {
 /* When the card is hovered, the shadow on the inside page will shrink to the left */
 .card:hover .inside-page {
   box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0, 0, 0, 0.1);
+}
+
+.industryCard {
+  position: relative;
+  /* top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%,-50%); */
+  min-width: 300px;
+  height: 360px;
+  background: #000;
+  border-radius: 5px;
+}
+.industryCard .image1 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.industryCard .image1 img {
+  width: 100%;
+  transition: .5s;
+  background-size: cover;
+  height: 100%;
+}
+.industryCard:hover .image1 img {
+  opacity: .5;
+  transform: translateX(30%);/*100%*/
+}
+.industryCard .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;/*100%*/
+  height: 100%;
+  background-color: #b4bbba !important;
+  transition: .5s;
+  transform-origin: left;
+  transform: perspective(2000px) rotateY(-90deg);
+}
+.industryCard:hover .details {
+  transform: perspective(2000px) rotateY(0deg);
+}
+.industryCard .details .center {
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.industryCard .details .center h1 {
+  margin: 0;
+  padding: 0;
+  color: #ff3636;
+  line-height: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.industryCard .details .center h1 span {
+  font-size: 14px;
+  color: #262626;
+}
+.industryCard .details .center p {
+  margin: 10px 0;
+  padding: 0;
+  color: #262626;
+}
+.industryCard .details .center ul {
+  margin: 10px auto 0;
+  padding: 0;
+  display: table;
+}
+.industryCard .details .center ul li {
+  list-style: none;
+  margin: 0 5px;
+  float: left;
+}
+.industryCard .details .center ul li a {
+  display: block;
+  background: #262626;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  transform: .5s;
+}
+.industryCard .details .center ul li a:hover {
+  background: #ff3636;
+}
+
+.industryCardBody {
+  margin: 0;
+  padding: 0;
+  background: #250008;
+  font-family: sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.indrustianButton {
+  background-color: transparent;
+  border: 3px solid;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  overflow: hidden;
+  padding: 0.7rem 0.75rem;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 90%;
+  z-index: 10;
+}
+
+@media (max-width: 1000px) {
+  .card-area {
+    display: none;
+  }
+  /* .industryMobileCard {
+    display: none;
+  } */
+}
+
+@media (min-width: 1000px) {
+  .industryMobileCard {
+    display: none;
+  }
 }
