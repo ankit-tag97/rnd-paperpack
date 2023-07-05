@@ -371,7 +371,57 @@ a:not([href]):not([tabindex]) {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
 }
+
+.slider1-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-90%, -50%);
+  font-size: 1rem;
+  font-family: Georgia, 'Times New Roman', Times, sans-serif;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 5px rgb(255, 72, 0);
+  float: left;
+  text-transform: uppercase
+}
+
+/* @media (min-width: 1440px) {
+
+  .slider1-text,
+  .slider2-text,
+  .slider3-text {
+    font-size: 80px;
+  }
+} */
+
+.slider2-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-90%, -50%);
+  font-size: 1rem;
+  font-family: Georgia, 'Times New Roman', Times, sans-serif;
+  letter-spacing: 3px;
+  text-shadow: 5px 5px 5px rgb(255, 196, 0);
+  float: left;
+  text-transform: uppercase
+}
+
+.slider3-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-90%, -50%);
+  font-size: 1.2rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 5px rgb(255, 72, 0);
+  float: left;
+  text-transform: uppercase
+}
+
 
 .home-slider .slider-wrapper .slider2 {
   background-image: url(../images/banner-1-updated.jpg);
@@ -1017,15 +1067,6 @@ header .toggle {
 }
 
 
-.inner-banner2 {
-  background: url(../images/banner_contact_0.jpg) no-repeat center;
-  background-position: 0 40%;
-  background-size: cover;
-  min-height: 20vw;
-  padding-top: 150px;
-  position: relative;
-}
-
 .inner-banner:before {
   content: "";
   position: absolute;
@@ -1210,6 +1251,11 @@ header .top_header {
 .inner-box {
   position: relative;
   margin-bottom: 30px;
+}
+
+.inner-box img {
+  width: 250px;
+  height: 255px;
 }
 
 .gallery-item .inner-box .overlay-box {
@@ -1666,6 +1712,7 @@ Generic layout (demo looks)
   padding-inline: 24px;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 24px;
+  justify-content: center;
 }
 
 @media screen and (max-width: 960px) {
@@ -1693,10 +1740,12 @@ Generic layout (demo looks)
 .slide-left {
   animation: 3s slide-left;
 }
+
 @keyframes slide-left {
   from {
     margin-left: 100%;
   }
+
   to {
     margin-left: 0%;
   }
@@ -1710,14 +1759,17 @@ Generic layout (demo looks)
   width: 200px;
   margin: auto;
 }
+
 .fade-in {
   animation: fadeIn ease 3s;
 }
-@keyframes fadeIn{
+
+@keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
